@@ -1,5 +1,5 @@
 <?php
-namespace Werkint\Smscenter\Exception;
+namespace Werkint\SMSCenter\Exception;
 
 /**
  * ServerException.

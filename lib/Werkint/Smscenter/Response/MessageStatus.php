@@ -1,5 +1,5 @@
 <?php
-namespace Werkint\Smscenter\Response;
+namespace Werkint\SMSCenter\Response;
 
 /**
  * MessageStatus.

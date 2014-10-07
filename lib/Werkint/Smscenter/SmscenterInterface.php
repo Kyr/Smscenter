@@ -1,9 +1,9 @@
 <?php
-namespace Werkint\Smscenter;
+namespace Werkint\SMSCenter;
 
-use Werkint\Smscenter\Response\MessageError;
-use Werkint\Smscenter\Response\MessageInfo;
-use Werkint\Smscenter\Response\PhoneOperator;
+use Werkint\SMSCenter\Response\MessageError;
+use Werkint\SMSCenter\Response\MessageInfo;
+use Werkint\SMSCenter\Response\PhoneOperator;
 
 /**
  * SmscenterInterface.
@@ -24,11 +24,21 @@ interface SmscenterInterface
         array $phones,
         $format = 0,
         $message = null,
-        \DateTime $time = null
+	$time = null
+//        \DateTime $time = null
     );
+
+  /**
+	 * Check number for existing and valid
+   *
+	 * @param $phoneNumber
+	 * @return bool
+	 */
+	public function checkNumber($phoneNumber);
 
     /**
      * Lists incoming messages
+     *
      * @param int $hours Hours to list, MAX = 70
      * @return mixed
      */
@@ -39,6 +49,7 @@ interface SmscenterInterface
     /**
      * Get account balance
      * Query amount is limited to 3 per minute.
+     *
      * @return float
      */
     public function getBalance();
@@ -46,6 +57,7 @@ interface SmscenterInterface
     /**
      * Gets message status
      * Query amount is limited to 3 per minute for same message.
+     *
      * @param string $phone
      * @param int    $messageId
      * @param bool   $moreInfo
@@ -61,6 +73,7 @@ interface SmscenterInterface
      * Fetches operator of phone number.
      * Query amount is limited to 100 per minute (3 for same phone).
      * Only for Russian Federation.
+     *
      * @param $phone
      * @return PhoneOperator
      */
