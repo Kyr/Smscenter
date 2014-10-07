@@ -6,11 +6,11 @@ use Werkint\SMSCenter\Response\MessageInfo;
 use Werkint\SMSCenter\Response\PhoneOperator;
 
 /**
- * SmscenterInterface.
+ * SMSCenterInterface.
  *
  * @author Bogdan Yurov <bogdan@yurov.me>
  */
-interface SmscenterInterface
+interface SMSCenterInterface
 {
     /**
      * Sends messages

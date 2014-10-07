@@ -13,7 +13,7 @@ use Werkint\SMSCenter\Response\PhoneOperator;
  *
  * @author Bogdan Yurov <bogdan@yurov.me>
  */
-class SMSCenter implements SmscenterInterface
+class SMSCenter implements SMSCenterInterface
 {
 	/** API url */
 	const BASE_URL = 'https://smsc.ru/sys/';
